@@ -1,9 +1,7 @@
 import './App.scss';
-import NavBar from './components/NavBar';
-import PostsBanner from './components/PostsBanner';
-
-import Posts from './components/Posts';
-
+import NavBar from './components/navigation/NavBar';
+import PostsBanner from './components/post/PostsBanner';
+import Posts from './components/post/Posts';
 
 function App() {
   return (

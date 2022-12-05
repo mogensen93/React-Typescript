@@ -1,6 +1,6 @@
 import "./PostTile.scss";
-import image from "../assets/images/placeholder.jpg";
-import Redirect from "../assets/images/Redirect.png";
+import image from "../../assets/images/placeholder.jpg";
+import Redirect from "../../assets/images/Redirect.png";
 import React, { useState, useEffect } from "react";
 
 export default function PostTile(props) {
@@ -8,10 +8,15 @@ export default function PostTile(props) {
   const [karmaScore, setKarmaScore] = useState("null");
 
   useEffect(() => {
-    var date = new Date(props.unixTime * 1000);
-    setDate(date.toLocaleDateString("default"));
+    convertUnixTime();
     getKarmaScore();
   }, []);
+
+  function convertUnixTime(){
+    var date = new Date(props.unixTime * 1000);
+    setDate(date.toLocaleDateString("default"));
+
+  }
 
   async function getKarmaScore() {
     fetch(`https://hacker-news.firebaseio.com/v0/user/${props.author}.json`)
