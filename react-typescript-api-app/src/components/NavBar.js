@@ -12,9 +12,9 @@ export default function NavBar() {
         </svg>
       </div>
       <div className="navbar-links-container">
-        <p>Link 1</p>
-        <p>Link 2</p>
-        <p>Link 3</p>
+        <a href="https://github.com/HackerNews/API">API docs</a>
+        <a href="https://github.com/mogensen93">Github</a>
+        <a href="https://www.linkedin.com/in/rasmus-mogensen-8104b2114/">LinkedIn</a>
       </div>
     </div>
   );
