@@ -35,9 +35,7 @@ export default function Posts() {
     if (arrayOfPosts.length === 0) {
       return;
     }
-
     sortPostsByScore(arrayOfPosts);
-
   }
 
   function sortPostsByScore(posts){
